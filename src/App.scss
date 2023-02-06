@@ -1,0 +1,105 @@
+@import url('./nullStyle.scss');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;800&display=swap');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    position: relative;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 20px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, .8);
+    padding: 20px 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent 0, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 90%, transparent);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.footer {
+    padding: 40px 0;
+}
+
+.intro,
+.about,
+.portfolio {
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent 0, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 90%, transparent);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.intro,
+.about {
+    min-height: 100vh;
+}
+
+.title {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 100px;
+        height: 3px;
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+    }
+}
+
+.slider {
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .swiper-pagination {
+        bottom:  0px !important;
+    }
+    .swiper-pagination-bullet {
+        background-color: #C4C4C4;
+        &-active {
+            width: 12px;
+            height: 12px;
+            padding: 2px;
+            background-color: transparent;
+            position: relative;
+            background-color: #fff;
+        }
+    }
+}
